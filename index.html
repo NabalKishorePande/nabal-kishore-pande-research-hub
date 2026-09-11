@@ -9,17 +9,12 @@
   >
 
   <title>
-    Non-ISBN Publications &amp; Digital Publishing | Nabal Kishore Pande
+    Non-ISBN Publications & Digital Publishing | Nabal Kishore Pande
   </title>
 
   <meta
     name="description"
-    content="Research-based non-ISBN publications, digital publishing, research infrastructure, practical tools and knowledge resources by Nabal Kishore Pande."
-  >
-
-  <meta
-    name="keywords"
-    content="Nabal Kishore Pande, non-ISBN publications, digital publishing, research publishing, research frameworks, decision systems, scholarship preparation intelligence, practical tools, open research"
+    content="Non-ISBN publications and digital publishing by Nabal Kishore Pande. Explore selected research-driven books and digital knowledge resources published through Leanpub, Gumroad and Selar."
   >
 
   <meta
@@ -27,860 +22,1181 @@
     content="Nabal Kishore Pande"
   >
 
+  <meta
+    name="keywords"
+    content="Nabal Kishore Pande, non-ISBN publications, digital publishing, Leanpub, Gumroad, Selar, research-driven guides, frameworks, decision systems"
+  >
+
   <link
     rel="canonical"
-    href="https://nabalkishorepande.github.io/nabal-kishore-pande-research-hub/non-isbn-publications-digital-publishing/"
+    href="https://nabalkishorepande.github.io/non-isbn-publications-digital-publishing/"
   >
 
   <style>
 
     :root {
-      --page: #ffffff;
-      --ink: #132b46;
-      --heading: #0d2744;
-      --muted: #536579;
-
+      --navy: #102a43;
       --blue: #1769aa;
-      --blue-bg: #eef6fc;
+      --blue-light: #edf6fc;
 
-      --green: #28734f;
-      --green-bg: #eef8f2;
+      --green: #18794e;
+      --green-light: #edf8f2;
 
-      --gold: #8a6825;
-      --gold-bg: #fbf7eb;
+      --orange: #b45309;
+      --orange-light: #fff6ea;
 
-      --purple: #67469a;
-      --purple-bg: #f5f0fb;
+      --purple: #6842a5;
+      --purple-light: #f5effc;
 
-      --teal: #19756f;
-      --teal-bg: #edf8f7;
+      --teal: #087f8c;
+      --teal-light: #edf9fa;
 
-      --border: #d9e1e9;
-      --border-dark: #c5d0dc;
+      --text: #172b4d;
+      --muted: #52606d;
 
+      --border: #d9e2ec;
+      --background: #ffffff;
       --soft: #f7f9fb;
 
-      --max: 1120px;
-      --radius: 12px;
+      --max-width: 1160px;
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 88px;
     }
+
 
     body {
       margin: 0;
-      background: var(--page);
-      color: var(--ink);
+
       font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
         Arial,
-        Helvetica,
         sans-serif;
-      font-size: 17px;
-      line-height: 1.7;
+
+      color: var(--text);
+
+      background: var(--background);
+
+      line-height: 1.65;
     }
+
 
     a {
-      color: var(--blue);
+      color: inherit;
     }
 
-    a:hover {
-      text-decoration-thickness: 2px;
-    }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+    .container {
+      width: min(
+        calc(100% - 40px),
+        var(--max-width)
+      );
 
-    .page {
-      width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
 
-    /* ==============================
-       HEADER
-    ============================== */
 
-    .site-header {
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
       position: sticky;
+
       top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(8px);
+
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.97);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter:
+        blur(10px);
     }
 
-    .header-main {
-      min-height: 72px;
+
+    .header-inner {
+      min-height: 76px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 24px;
     }
 
-    .brand {
-      color: var(--heading);
+
+    .identity {
       text-decoration: none;
-      font-weight: 700;
+
+      color: var(--navy);
+
       font-size: 18px;
-      white-space: nowrap;
+
+      font-weight: 800;
     }
 
-    .header-title {
+
+    .identity small {
+      display: block;
+
+      margin-top: 2px;
+
       color: var(--muted);
-      font-size: 15px;
-      text-align: right;
+
+      font-size: 13px;
+
+      font-weight: 500;
     }
 
-    /* ==============================
-       NAVIGATION
-    ============================== */
 
-    .navigation {
-      background: #f6f8fa;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
+    nav {
       display: flex;
-      gap: 8px;
-      padding: 10px 0;
-      overflow-x: auto;
-      scrollbar-width: thin;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap: 7px;
     }
 
-    .nav-inner a {
-      flex: 0 0 auto;
-      display: inline-flex;
-      align-items: center;
-      min-height: 42px;
-      padding: 8px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #ffffff;
-      color: var(--heading);
-      font-size: 14px;
-      font-weight: 700;
+
+    nav a {
+      padding: 8px 12px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 7px;
+
+      background: #fff;
+
+      color: var(--navy);
+
       text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 700;
     }
 
-    .nav-inner a:hover {
-      border-color: var(--blue);
-      color: var(--blue);
-      background: var(--blue-bg);
+
+    nav a:hover {
+      background: var(--navy);
+
+      color: #fff;
+
+      border-color: var(--navy);
     }
 
-    /* ==============================
+
+    /* =========================
        HERO
-    ============================== */
+    ========================= */
 
     .hero {
-      padding: 68px 0 62px;
-      border-bottom: 1px solid var(--border);
+      padding: 74px 0 72px;
+
+      border-bottom:
+        1px solid var(--border);
     }
+
 
     .hero-grid {
       display: grid;
+
       grid-template-columns:
         minmax(0, 1fr)
-        minmax(330px, 470px);
-      gap: 54px;
+        minmax(320px, 0.72fr);
+
+      gap: 60px;
+
       align-items: center;
     }
 
+
     .eyebrow {
-      margin: 0 0 14px;
+      margin-bottom: 15px;
+
       color: var(--blue);
-      font-size: 14px;
+
+      font-size: 13px;
+
       font-weight: 800;
-      letter-spacing: 0.1em;
+
+      letter-spacing: 0.12em;
+
       text-transform: uppercase;
     }
 
+
     h1 {
-      margin: 0;
-      color: var(--heading);
-      font-size: clamp(40px, 5vw, 66px);
-      line-height: 1.06;
-      letter-spacing: -0.03em;
+      margin: 0 0 22px;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(40px, 6vw, 68px);
+
+      line-height: 1.03;
+
+      letter-spacing: -0.04em;
     }
 
-    .hero-lead {
-      max-width: 760px;
-      margin: 24px 0 0;
+
+    .hero-text {
+      max-width: 730px;
+
+      margin: 0;
+
       color: var(--muted);
-      font-size: 21px;
+
+      font-size:
+        clamp(18px, 2vw, 21px);
+
       line-height: 1.55;
     }
 
-    .hero-actions {
+
+    .hero-links {
       display: flex;
+
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
+
+      gap: 10px;
+
+      margin-top: 28px;
     }
+
 
     .button {
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
-      min-height: 48px;
-      padding: 10px 18px;
-      border: 1px solid var(--border-dark);
-      border-radius: 8px;
-      color: var(--heading);
-      background: #ffffff;
-      font-weight: 700;
+
+      min-height: 46px;
+
+      padding: 10px 17px;
+
+      border-radius: 7px;
+
+      border:
+        1px solid var(--navy);
+
       text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 800;
     }
+
 
     .button-primary {
-      border-color: var(--heading);
-      background: var(--heading);
-      color: #ffffff;
+      background: var(--navy);
+
+      color: #fff;
     }
 
-    .button:hover {
-      text-decoration: none;
-      transform: translateY(-1px);
+
+    .button-secondary {
+      background: #fff;
+
+      color: var(--navy);
     }
+
+
+    .button:hover {
+      opacity: 0.88;
+    }
+
+
+    /* =========================
+       DIRECTIONAL VISUAL
+    ========================= */
 
     .hero-visual {
       width: 100%;
-      overflow: hidden;
-      border: 2px solid var(--heading);
-      border-radius: 14px;
-      background: #ffffff;
-      box-shadow: 0 12px 34px rgba(19,43,70,0.10);
+
+      display: flex;
+
+      justify-content: flex-end;
+
+      align-items: center;
     }
+
 
     .hero-visual img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+      display: block;
+
+      width: min(100%, 470px);
+
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 16px 40px
+        rgba(16, 42, 67, 0.10);
     }
 
-    /* ==============================
+
+    /* =========================
        GENERAL SECTIONS
-    ============================== */
+    ========================= */
 
     .section {
-      padding: 62px 0;
-      border-bottom: 1px solid var(--border);
+      padding: 70px 0;
+
+      border-bottom:
+        1px solid var(--border);
     }
+
 
     .section-heading {
-      max-width: 850px;
-      margin-bottom: 32px;
+      max-width: 820px;
+
+      margin-bottom: 34px;
     }
 
-    .section-code {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 12px;
-      padding: 5px 10px;
-      border-radius: 5px;
+
+    .section-label {
+      margin-bottom: 9px;
+
       font-size: 12px;
+
       font-weight: 800;
-      letter-spacing: 0.07em;
+
+      letter-spacing: 0.12em;
+
       text-transform: uppercase;
     }
 
-    .code-blue {
-      color: var(--blue);
-      background: var(--blue-bg);
-    }
-
-    .code-gold {
-      color: var(--gold);
-      background: var(--gold-bg);
-    }
-
-    .code-green {
-      color: var(--green);
-      background: var(--green-bg);
-    }
-
-    .code-purple {
-      color: var(--purple);
-      background: var(--purple-bg);
-    }
-
-    .code-teal {
-      color: var(--teal);
-      background: var(--teal-bg);
-    }
 
     h2 {
-      margin: 0 0 16px;
-      color: var(--heading);
-      font-size: clamp(30px, 3.4vw, 42px);
-      line-height: 1.18;
-      letter-spacing: -0.02em;
+      margin: 0 0 13px;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(30px, 4vw, 44px);
+
+      line-height: 1.1;
+
+      letter-spacing: -0.025em;
     }
 
-    h3 {
-      margin: 0 0 10px;
-      color: var(--heading);
-      font-size: 21px;
-      line-height: 1.3;
+
+    .section-intro {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      max-width: 800px;
     }
 
-    p {
-      margin: 0 0 16px;
+
+    /* =========================
+       RESEARCH FLOW
+    ========================= */
+
+    .research-section {
+      background: var(--blue-light);
     }
 
-    /* ==============================
-       OVERVIEW
-    ============================== */
 
-    .overview {
-      background: #ffffff;
+    .research-section .section-label {
+      color: var(--blue);
     }
 
-    .overview-copy {
-      max-width: 850px;
-    }
 
-    .overview-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ==============================
-       RESEARCH PROCESS
-    ============================== */
-
-    .process {
-      background: var(--blue-bg);
-      border-top: 4px solid var(--blue);
-    }
-
-    .process-grid {
+    .flow {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 12px;
+    }
+
+
+    .flow-item {
+      min-height: 125px;
+
+      padding: 20px 15px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      text-align: center;
+
+      background: #fff;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 10px;
+    }
+
+
+    .flow-number {
+      margin-bottom: 7px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+
+    .flow-title {
+      color: var(--navy);
+
+      font-size: 15px;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       PLATFORM SECTION
+    ========================= */
+
+    .platform-section {
+      background: #fff;
+    }
+
+
+    .platform-section .section-label {
+      color: var(--navy);
+    }
+
+
+    .platform-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .platform-card {
+      padding: 28px;
+
+      background: #fff;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+    }
+
+
+    .platform-card.leanpub {
+      border-top:
+        5px solid var(--green);
+    }
+
+
+    .platform-card.gumroad {
+      border-top:
+        5px solid var(--orange);
+    }
+
+
+    .platform-card.selar {
+      border-top:
+        5px solid var(--purple);
+    }
+
+
+    .platform-card h3 {
+      margin: 0 0 9px;
+
+      color: var(--navy);
+
+      font-size: 25px;
+    }
+
+
+    .platform-card p {
+      min-height: 78px;
+
+      margin: 0 0 20px;
+
+      color: var(--muted);
+    }
+
+
+    .platform-tag {
+      display: inline-block;
+
+      margin-bottom: 14px;
+
+      padding: 5px 8px;
+
+      border-radius: 5px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .leanpub .platform-tag {
+      background: var(--green-light);
+
+      color: var(--green);
+    }
+
+
+    .gumroad .platform-tag {
+      background: var(--orange-light);
+
+      color: var(--orange);
+    }
+
+
+    .selar .platform-tag {
+      background: var(--purple-light);
+
+      color: var(--purple);
+    }
+
+
+    .platform-link {
+      display: inline-flex;
+
+      padding: 9px 13px;
+
+      border-radius: 7px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+
+    .leanpub .platform-link {
+      background: var(--green);
+
+      color: #fff;
+    }
+
+
+    .gumroad .platform-link {
+      background: var(--orange);
+
+      color: #fff;
+    }
+
+
+    .selar .platform-link {
+      background: var(--purple);
+
+      color: #fff;
+    }
+
+
+    /* =========================
+       PUBLICATION SECTIONS
+    ========================= */
+
+    .leanpub-section {
+      background: var(--green-light);
+    }
+
+
+    .leanpub-section .section-label {
+      color: var(--green);
+    }
+
+
+    .gumroad-section {
+      background: var(--orange-light);
+    }
+
+
+    .gumroad-section .section-label {
+      color: var(--orange);
+    }
+
+
+    .publication-list {
+      display: grid;
+
       gap: 14px;
     }
 
-    .process-card {
-      position: relative;
-      min-height: 180px;
-      padding: 22px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #ffffff;
-    }
 
-    .process-number {
-      margin-bottom: 18px;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .process-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.55;
-    }
-
-    /* ==============================
-       RESEARCH / FRAMEWORK
-    ============================== */
-
-    .split {
+    .publication {
       display: grid;
+
       grid-template-columns:
         minmax(0, 1fr)
-        minmax(300px, 400px);
-      gap: 42px;
-      align-items: stretch;
-    }
+        auto;
 
-    .information-panel {
-      padding: 30px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #ffffff;
-    }
+      gap: 25px;
 
-    .information-panel p:last-child {
-      margin-bottom: 0;
-    }
-
-    .visual-panel {
-      display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 30px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--soft);
+
+      padding: 23px 25px;
+
+      background: #fff;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 10px;
     }
 
-    .visual-panel strong {
-      display: block;
-      color: var(--heading);
-      font-size: 22px;
-      line-height: 1.45;
-      text-align: center;
+
+    .publication h3 {
+      margin: 0 0 5px;
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+      line-height: 1.3;
     }
 
-    .research-section {
-      border-top: 4px solid var(--blue);
-    }
 
-    .framework-section {
-      border-top: 4px solid var(--gold);
-    }
-
-    .guide-section {
-      border-top: 4px solid var(--green);
-    }
-
-    .publication-section {
-      border-top: 4px solid var(--purple);
-    }
-
-    /* ==============================
-       PLATFORMS
-    ============================== */
-
-    .platforms {
-      background: var(--soft);
-      border-top: 4px solid var(--teal);
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .link-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 190px;
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #ffffff;
-      text-decoration: none;
-    }
-
-    .link-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 8px 22px rgba(19,43,70,0.07);
-      text-decoration: none;
-    }
-
-    .card-type {
-      margin-bottom: 12px;
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    .link-card h3 {
-      color: var(--heading);
-    }
-
-    .link-card p {
-      flex: 1;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.55;
-    }
-
-    .card-link {
-      color: var(--teal);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    /* ==============================
-       TOOLS AND PRODUCTS
-    ============================== */
-
-    .tools {
-      border-top: 4px solid var(--green);
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 270px;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #ffffff;
-    }
-
-    .product-card:hover {
-      border-color: var(--green);
-      box-shadow: 0 8px 22px rgba(19,43,70,0.07);
-    }
-
-    .product-number {
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .product-card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .product-action {
-      margin-top: auto;
-      padding-top: 10px;
-    }
-
-    .product-action a {
-      display: inline-flex;
-      min-height: 42px;
-      align-items: center;
-      padding: 8px 14px;
-      border: 1px solid var(--green);
-      border-radius: 7px;
-      color: var(--green);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .product-action a:hover {
-      background: var(--green-bg);
-    }
-
-    /* ==============================
-       PUBLICATION MODEL
-    ============================== */
-
-    .model {
-      background: var(--gold-bg);
-      border-top: 4px solid var(--gold);
-    }
-
-    .model-list {
-      max-width: 850px;
+    .publication p {
       margin: 0;
-      padding: 0;
-      list-style: none;
-      border-top: 1px solid var(--border-dark);
-    }
 
-    .model-list li {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 24px;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border-dark);
-    }
-
-    .model-list strong {
-      color: var(--heading);
-    }
-
-    .model-list span {
       color: var(--muted);
+
+      font-size: 14px;
     }
 
-    /* ==============================
+
+    .publication-meta {
+      margin-top: 6px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+
+    .publication-link {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-width: 130px;
+
+      padding: 9px 14px;
+
+      border-radius: 7px;
+
+      color: #fff;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+
+    .leanpub-section .publication-link {
+      background: var(--green);
+    }
+
+
+    .gumroad-section .publication-link {
+      background: var(--orange);
+    }
+
+
+    .publication-link:hover {
+      opacity: 0.88;
+    }
+
+
+    /* =========================
+       SELAR
+    ========================= */
+
+    .selar-section {
+      background: var(--purple-light);
+    }
+
+
+    .selar-section .section-label {
+      color: var(--purple);
+    }
+
+
+    .selar-profile {
+      max-width: 760px;
+
+      padding: 30px;
+
+      background: #fff;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+    }
+
+
+    .selar-profile h3 {
+      margin: 0 0 10px;
+
+      color: var(--navy);
+
+      font-size: 27px;
+    }
+
+
+    .selar-profile p {
+      margin: 0 0 21px;
+
+      color: var(--muted);
+
+      font-size: 17px;
+    }
+
+
+    .selar-profile a {
+      display: inline-flex;
+
+      padding: 10px 16px;
+
+      border-radius: 7px;
+
+      background: var(--purple);
+
+      color: #fff;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================
        ACCESS
-    ============================== */
+    ========================= */
 
-    .access {
-      border-top: 4px solid var(--purple);
+    .access-section {
+      background: var(--teal-light);
     }
+
+
+    .access-section .section-label {
+      color: var(--teal);
+    }
+
 
     .access-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 18px;
     }
 
+
     .access-card {
-      padding: 26px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #ffffff;
+      padding: 25px;
+
+      background: #fff;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 10px;
     }
 
-    .access-card a {
-      font-weight: 700;
+
+    .access-card h3 {
+      margin: 0 0 8px;
+
+      color: var(--navy);
+
+      font-size: 20px;
     }
 
-    /* ==============================
+
+    .access-card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
        FOOTER
-    ============================== */
+    ========================= */
 
     footer {
-      padding: 34px 0 42px;
-      color: var(--muted);
-      font-size: 14px;
-      border-top: 1px solid var(--border);
+      padding: 45px 0;
+
+      background: var(--navy);
+
+      color: #fff;
     }
+
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.4fr 1fr 1fr;
+
+      gap: 35px;
+    }
+
+
+    footer h3 {
+      margin: 0 0 10px;
+
+      font-size: 18px;
+    }
+
 
     footer p {
-      margin: 0 0 8px;
+      margin: 0;
+
+      color: #d9e2ec;
+
+      font-size: 14px;
     }
 
-    footer a {
-      font-weight: 600;
+
+    .footer-links {
+      display: grid;
+
+      gap: 7px;
     }
 
-    /* ==============================
+
+    .footer-links a {
+      color: #fff;
+
+      text-decoration: none;
+
+      font-size: 14px;
+    }
+
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    .copyright {
+      margin-top: 35px;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.18);
+
+      color: #bcccdc;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
        RESPONSIVE
-    ============================== */
+    ========================= */
 
-    @media (max-width: 950px) {
+    @media (max-width: 900px) {
 
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .header-inner {
+        padding: 14px 0;
+
+        align-items: flex-start;
+
+        flex-direction: column;
       }
 
-      .card-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+      nav {
+        justify-content: flex-start;
       }
 
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-    @media (max-width: 800px) {
-
-      body {
-        font-size: 16px;
-      }
-
-      .page {
-        width: min(calc(100% - 28px), var(--max));
-      }
-
-      .header-main {
-        min-height: 62px;
-      }
-
-      .header-title {
-        display: none;
-      }
-
-      .hero {
-        padding: 42px 0 46px;
-      }
 
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 34px;
+
+        gap: 38px;
       }
+
 
       .hero-visual {
-        max-width: 500px;
+        justify-content: flex-start;
       }
 
-      .split {
-        grid-template-columns: 1fr;
-        gap: 24px;
+
+      .hero-visual img {
+        width: min(100%, 430px);
       }
+
+
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .platform-card p {
+        min-height: auto;
+      }
+
+
+      .flow {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
 
       .access-grid {
         grid-template-columns: 1fr;
       }
 
-      .model-list li {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
 
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    @media (max-width: 560px) {
 
-      .page {
-        width: min(calc(100% - 22px), var(--max));
+    @media (max-width: 600px) {
+
+      .container {
+        width:
+          calc(100% - 28px);
       }
 
-      .process-grid,
-      .card-grid {
+
+      .hero {
+        padding: 52px 0;
+      }
+
+
+      .section {
+        padding: 55px 0;
+      }
+
+
+      .flow {
         grid-template-columns: 1fr;
       }
 
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+
+      .publication {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
       }
+
+
+      .publication-link {
+        width: 100%;
+      }
+
+
+      nav a {
+        font-size: 12px;
+
+        padding: 7px 9px;
+      }
+
+
+      .hero-links {
+        display: grid;
+
+        grid-template-columns: 1fr;
+      }
+
 
       .button {
         width: 100%;
       }
-
-      .section {
-        padding: 46px 0;
-      }
-
-      .information-panel,
-      .visual-panel,
-      .product-card,
-      .link-card,
-      .access-card {
-        padding: 22px;
-      }
-
     }
 
   </style>
 </head>
 
+
 <body>
 
-  <!-- ==============================
+
+  <!-- =========================
        HEADER
-  =============================== -->
+  ========================= -->
 
-  <header class="site-header">
+  <header>
 
-    <div class="page header-main">
+    <div class="container header-inner">
 
       <a
-        class="brand"
-        href="https://nabalkishorepande.github.io/"
+        class="identity"
+        href="#top"
       >
         Nabal Kishore Pande
+
+        <small>
+          Non-ISBN Publications & Digital Publishing
+        </small>
       </a>
 
-      <div class="header-title">
-        Non-ISBN Publications &amp; Digital Publishing
-      </div>
+
+      <nav aria-label="Page navigation">
+
+        <a href="#research">
+          Research
+        </a>
+
+        <a href="#platforms">
+          Platforms
+        </a>
+
+        <a href="#leanpub">
+          Leanpub
+        </a>
+
+        <a href="#gumroad">
+          Gumroad
+        </a>
+
+        <a href="#selar">
+          Selar
+        </a>
+
+        <a href="#access">
+          Access
+        </a>
+
+      </nav>
 
     </div>
 
   </header>
 
 
-  <!-- ==============================
-       NAVIGATION
-  =============================== -->
 
-  <nav
-    class="navigation"
-    aria-label="Page navigation"
-  >
-
-    <div class="page nav-inner">
-
-      <a href="#overview">Overview</a>
-
-      <a href="#research">Research</a>
-
-      <a href="#framework">Framework</a>
-
-      <a href="#guide-tool">Guide / Tool</a>
-
-      <a href="#publication">Digital Publication</a>
-
-      <a href="#platforms">Platforms</a>
-
-      <a href="#tools">Products</a>
-
-      <a href="#model">Publication Model</a>
-
-      <a href="#access">Access</a>
-
-    </div>
-
-  </nav>
+  <main id="top">
 
 
-  <main>
-
-    <!-- ==============================
+    <!-- =========================
          HERO
-    =============================== -->
+    ========================= -->
 
     <section class="hero">
 
-      <div class="page">
+      <div class="container hero-grid">
 
-        <div class="hero-grid">
 
-          <div>
+        <div>
 
-            <p class="eyebrow">
-              Research to Digital Publication
-            </p>
-
-            <h1>
-              Non-ISBN Publications
-              &amp; Digital Publishing
-            </h1>
-
-            <p class="hero-lead">
-              Research-based knowledge converted into
-              structured, usable and accessible digital
-              publications.
-            </p>
-
-            <div class="hero-actions">
-
-              <a
-                class="button button-primary"
-                href="#publication"
-              >
-                View publication model
-              </a>
-
-              <a
-                class="button"
-                href="https://github.com/NabalKishorePande/nabal-kishore-pande-research-hub"
-                target="_blank"
-                rel="noopener"
-              >
-                Research Hub
-              </a>
-
-              <a
-                class="button"
-                href="https://fundedabroadindia.blogspot.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Funded Abroad India
-              </a>
-
-            </div>
-
+          <div class="eyebrow">
+            Digital Publishing
           </div>
 
 
-          <div class="hero-visual">
+          <h1>
+            Non-ISBN Publications
+            &amp; Digital Publishing
+          </h1>
 
-            <img
-              src="https://nabalkishorepande.github.io/nabal-kishore-pande-research-hub/research-to-digital-publication.png"
-              alt="Research moving through a framework and guide or tool into digital publication and public access."
-              width="1200"
-              height="1200"
-              loading="eager"
+
+          <p class="hero-text">
+            Research-driven guides, frameworks,
+            and tools converted into accessible
+            digital publications for students and
+            professionals making better education
+            and career decisions.
+          </p>
+
+
+          <div class="hero-links">
+
+            <a
+              class="button button-primary"
+              href="#platforms"
             >
+              Explore publishing platforms
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="#publications"
+            >
+              View publications
+            </a>
 
           </div>
+
+        </div>
+
+
+        <!--
+          ONE DIRECTIONAL VISUAL.
+          Keep this image square and top-right.
+        -->
+
+        <div class="hero-visual">
+
+          <img
+            src="research-to-digital-publication.png"
+            alt="Directional publishing flow from research to framework, guide or tool, digital publication and public access"
+            width="600"
+            height="600"
+            loading="eager"
+          >
 
         </div>
 
@@ -889,431 +1205,107 @@
     </section>
 
 
-    <!-- ==============================
-         OVERVIEW
-    =============================== -->
 
-    <section
-      id="overview"
-      class="section overview"
-    >
-
-      <div class="page">
-
-        <div class="section-heading">
-
-          <span class="section-code code-blue">
-            Overview
-          </span>
-
-          <h2>
-            From research to usable publication
-          </h2>
-
-        </div>
-
-        <div class="overview-copy">
-
-          <p>
-            This publishing approach connects research,
-            structured knowledge, practical resources and
-            digital public access.
-          </p>
-
-          <p>
-            A publication does not need an ISBN to provide
-            research value, practical value or public access.
-            The important question is whether the underlying
-            work is useful, structured, documented and
-            accessible.
-          </p>
-
-          <p>
-            This page therefore treats digital publication as
-            part of a wider research and knowledge system rather
-            than as an isolated publishing format.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         PROCESS
-    =============================== -->
-
-    <section class="section process">
-
-      <div class="page">
-
-        <div class="section-heading">
-
-          <span class="section-code code-blue">
-            Publishing sequence
-          </span>
-
-          <h2>
-            A connected research-to-publication system
-          </h2>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="process-card">
-
-            <div class="process-number">
-              01 / RESEARCH
-            </div>
-
-            <h3>
-              Evidence
-            </h3>
-
-            <p>
-              Research, observation, source material and
-              analysis establish the knowledge base.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              02 / FRAMEWORK
-            </div>
-
-            <h3>
-              Structure
-            </h3>
-
-            <p>
-              Evidence is organised into a clear framework,
-              method or decision structure.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              03 / GUIDE / TOOL
-            </div>
-
-            <h3>
-              Application
-            </h3>
-
-            <p>
-              The structured knowledge becomes a guide,
-              workflow, checklist or practical tool.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              04 / PUBLICATION
-            </div>
-
-            <h3>
-              Digital output
-            </h3>
-
-            <p>
-              The work is presented as an accessible digital
-              publication or knowledge resource.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              05 / ACCESS
-            </div>
-
-            <h3>
-              Public use
-            </h3>
-
-            <p>
-              Readers can access, read, apply, reference and
-              revisit the resulting resource.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         RESEARCH
-    =============================== -->
+    <!-- =========================
+         RESEARCH TO PUBLICATION
+    ========================= -->
 
     <section
       id="research"
       class="section research-section"
     >
 
-      <div class="page">
+      <div class="container">
 
-        <div class="split">
 
-          <div class="information-panel">
+        <div class="section-heading">
 
-            <span class="section-code code-blue">
+          <div class="section-label">
+            Research to Publication
+          </div>
+
+
+          <h2>
+            Turning research into usable knowledge
+          </h2>
+
+
+          <p class="section-intro">
+            The publishing layer connects research
+            with structured frameworks, practical
+            guides, tools and public digital access.
+          </p>
+
+        </div>
+
+
+        <div class="flow">
+
+
+          <div class="flow-item">
+
+            <span class="flow-number">
+              01
+            </span>
+
+            <span class="flow-title">
               Research
             </span>
 
-            <h2>
-              Evidence comes first
-            </h2>
-
-            <p>
-              Publications begin with research, observation,
-              analysis and the organisation of relevant
-              evidence.
-            </p>
-
-            <p>
-              The purpose is not simply to collect information.
-              Research is developed into a form that can support
-              understanding, comparison, planning or
-              decision-making.
-            </p>
-
-            <p>
-              Where a claim matters, the underlying evidence and
-              source should remain identifiable.
-            </p>
-
           </div>
 
 
-          <div class="visual-panel">
+          <div class="flow-item">
 
-            <strong>
-              Research
-              <br>
-              ↓
-              <br>
-              Evidence
-              <br>
-              ↓
-              <br>
-              Structured knowledge
-            </strong>
+            <span class="flow-number">
+              02
+            </span>
 
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         FRAMEWORK
-    =============================== -->
-
-    <section
-      id="framework"
-      class="section framework-section"
-    >
-
-      <div class="page">
-
-        <div class="split">
-
-          <div class="information-panel">
-
-            <span class="section-code code-gold">
+            <span class="flow-title">
               Framework
             </span>
 
-            <h2>
-              Structure turns research into a system
-            </h2>
-
-            <p>
-              Research can be organised into frameworks,
-              methods, models, sequences and decision structures
-              where structure improves practical use.
-            </p>
-
-            <p>
-              A framework gives the reader a defined way to
-              examine a problem, compare evidence or carry out
-              a task.
-            </p>
-
           </div>
 
 
-          <div class="visual-panel">
+          <div class="flow-item">
 
-            <strong>
-              Evidence
-              <br>
-              ↓
-              <br>
-              Framework
-              <br>
-              ↓
-              <br>
-              Method
-            </strong>
+            <span class="flow-number">
+              03
+            </span>
 
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         GUIDE / TOOL
-    =============================== -->
-
-    <section
-      id="guide-tool"
-      class="section guide-section"
-    >
-
-      <div class="page">
-
-        <div class="split">
-
-          <div class="information-panel">
-
-            <span class="section-code code-green">
+            <span class="flow-title">
               Guide / Tool
             </span>
 
-            <h2>
-              Knowledge becomes actionable
-            </h2>
-
-            <p>
-              Research and frameworks can be converted into
-              guides, tools, checklists, workflows, assessment
-              resources and other practical outputs.
-            </p>
-
-            <p>
-              These resources help readers use the underlying
-              research instead of only reading about it.
-            </p>
-
           </div>
 
 
-          <div class="visual-panel">
+          <div class="flow-item">
 
-            <strong>
-              Framework
-              <br>
-              ↓
-              <br>
-              Guide / Tool
-              <br>
-              ↓
-              <br>
-              Action
-            </strong>
+            <span class="flow-number">
+              04
+            </span>
 
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         DIGITAL PUBLICATION
-    =============================== -->
-
-    <section
-      id="publication"
-      class="section publication-section"
-    >
-
-      <div class="page">
-
-        <div class="split">
-
-          <div class="information-panel">
-
-            <span class="section-code code-purple">
+            <span class="flow-title">
               Digital Publication
             </span>
 
-            <h2>
-              Publication is an access layer
-            </h2>
-
-            <p>
-              Digital publishing provides a practical way to
-              present the resulting knowledge in a structured,
-              readable and accessible form.
-            </p>
-
-            <p>
-              The publication can support direct reading,
-              reference, reuse and continued development without
-              depending on a traditional book-production model.
-            </p>
-
-            <div class="hero-actions">
-
-              <a
-                class="button button-primary"
-                href="https://nabalkishorepande.github.io/"
-                target="_blank"
-                rel="noopener"
-              >
-                Research &amp; Publishing Hub
-              </a>
-
-            </div>
-
           </div>
 
 
-          <div class="visual-panel">
+          <div class="flow-item">
 
-            <strong>
-              Usable knowledge
-              <br>
-              ↓
-              <br>
-              Digital publication
-              <br>
-              ↓
-              <br>
-              Public access
-            </strong>
+            <span class="flow-number">
+              05
+            </span>
+
+            <span class="flow-title">
+              Public Access
+            </span>
 
           </div>
+
 
         </div>
 
@@ -1322,252 +1314,144 @@
     </section>
 
 
-    <!-- ==============================
+
+    <!-- =========================
          PLATFORMS
-    =============================== -->
+    ========================= -->
 
     <section
       id="platforms"
-      class="section platforms"
+      class="section platform-section"
     >
 
-      <div class="page">
+      <div class="container">
+
 
         <div class="section-heading">
 
-          <span class="section-code code-teal">
-            Platforms
-          </span>
+          <div class="section-label">
+            Publishing Platforms
+          </div>
+
 
           <h2>
-            Research and publishing infrastructure
+            Three digital publishing channels
           </h2>
 
-          <p>
-            Research outputs are distributed across
-            specialised research, publishing and professional
-            platforms. Each platform has a different role.
+
+          <p class="section-intro">
+            The current non-ISBN publishing system
+            uses Leanpub, Gumroad and Selar for
+            different forms of digital publication
+            and access.
           </p>
 
         </div>
 
 
-        <div class="card-grid">
+        <div class="platform-grid">
 
-          <a
-            class="link-card"
-            href="https://github.com/NabalKishorePande"
-            target="_blank"
-            rel="noopener"
-          >
 
-            <span class="card-type">
-              Research infrastructure
+          <!-- LEANPUB -->
+
+          <article class="platform-card leanpub">
+
+            <span class="platform-tag">
+              Author &amp; Books
             </span>
+
 
             <h3>
-              GitHub
+              Leanpub
             </h3>
 
+
             <p>
-              Version-controlled research assets, publishing
-              infrastructure, datasets and digital projects.
+              Digital publishing platform for
+              structured books and professional
+              knowledge publications.
             </p>
 
-            <span class="card-link">
-              Open GitHub →
+
+            <a
+              class="platform-link"
+              href="https://leanpub.com/u/nabalkishorepande"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Leanpub profile
+            </a>
+
+          </article>
+
+
+
+          <!-- GUMROAD -->
+
+          <article class="platform-card gumroad">
+
+            <span class="platform-tag">
+              Digital Products
             </span>
 
-          </a>
-
-
-          <a
-            class="link-card"
-            href="https://orcid.org/my-orcid?orcid=0009-0007-3325-9966"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Research identity
-            </span>
 
             <h3>
-              ORCID
+              Gumroad
             </h3>
 
+
             <p>
-              Persistent researcher identification and
-              publication identity.
+              Digital distribution channel for
+              research-driven guides and scholarship
+              decision resources.
             </p>
 
-            <span class="card-link">
-              Open ORCID →
+
+            <a
+              class="platform-link"
+              href="https://fundedabroadindia.gumroad.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Gumroad profile
+            </a>
+
+          </article>
+
+
+
+          <!-- SELAR -->
+
+          <article class="platform-card selar">
+
+            <span class="platform-tag">
+              Profile
             </span>
 
-          </a>
-
-
-          <a
-            class="link-card"
-            href="https://zenodo.org/records/21551747"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Open research
-            </span>
 
             <h3>
-              Zenodo
+              Selar
             </h3>
 
-            <p>
-              Open research record for published research and
-              associated scholarly outputs.
-            </p>
-
-            <span class="card-link">
-              Open Zenodo →
-            </span>
-
-          </a>
-
-
-          <a
-            class="link-card"
-            href="https://www.scienceopen.com/user/nabal-kishore-pande"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Scholarly profile
-            </span>
-
-            <h3>
-              ScienceOpen
-            </h3>
 
             <p>
-              Public scholarly profile and research discovery
-              presence.
+              Profile for research-driven guides,
+              frameworks and tools supporting better
+              education and career decisions.
             </p>
 
-            <span class="card-link">
-              Open ScienceOpen →
-            </span>
 
-          </a>
+            <a
+              class="platform-link"
+              href="https://selar.com/m/nabalkishorepande"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Selar profile
+            </a>
 
+          </article>
 
-          <a
-            class="link-card"
-            href="https://independentresearcher.academia.edu/NabalKishorePande"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Research publishing
-            </span>
-
-            <h3>
-              Academia.edu
-            </h3>
-
-            <p>
-              Research papers, working materials and public
-              academic writing.
-            </p>
-
-            <span class="card-link">
-              Open Academia.edu →
-            </span>
-
-          </a>
-
-
-          <a
-            class="link-card"
-            href="https://archive.org/details/@nawal_pandey/uploads"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Digital archive
-            </span>
-
-            <h3>
-              Internet Archive
-            </h3>
-
-            <p>
-              Public digital archive for accessible research and
-              publishing materials.
-            </p>
-
-            <span class="card-link">
-              Open Internet Archive →
-            </span>
-
-          </a>
-
-
-          <a
-            class="link-card"
-            href="https://www.slideshare.net/nabalpandey/slideshows"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Knowledge distribution
-            </span>
-
-            <h3>
-              SlideShare
-            </h3>
-
-            <p>
-              Public presentation and visual knowledge
-              distribution.
-            </p>
-
-            <span class="card-link">
-              Open SlideShare →
-            </span>
-
-          </a>
-
-
-          <a
-            class="link-card"
-            href="https://fundedabroadindia.blogspot.com/"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <span class="card-type">
-              Research-led publishing
-            </span>
-
-            <h3>
-              Funded Abroad India
-            </h3>
-
-            <p>
-              Scholarship preparation intelligence, research,
-              decision guidance and practical resources.
-            </p>
-
-            <span class="card-link">
-              Open Funded Abroad India →
-            </span>
-
-          </a>
 
         </div>
 
@@ -1576,129 +1460,156 @@
     </section>
 
 
-    <!-- ==============================
-         TOOLS / PRODUCTS
-    =============================== -->
+
+    <!-- =========================
+         LEANPUB
+    ========================= -->
 
     <section
-      id="tools"
-      class="section tools"
+      id="leanpub"
+      class="section leanpub-section"
     >
 
-      <div class="page">
+      <div class="container">
+
 
         <div class="section-heading">
 
-          <span class="section-code code-green">
-            Tools / Products
-          </span>
+          <div class="section-label">
+            Leanpub Publications
+          </div>
+
 
           <h2>
-            Practical resources derived from research
+            Selected Leanpub books
           </h2>
 
-          <p>
-            Research becomes more useful when it can support an
-            actual decision or task. These resources provide
-            direct access to practical applications of the
-            research.
+
+          <p class="section-intro">
+            Three approved Leanpub publications
+            form the book component of this
+            non-ISBN publishing portfolio.
           </p>
 
         </div>
 
 
-        <div class="product-grid">
+        <div class="publication-list">
 
-          <article class="product-card">
 
-            <div class="product-number">
-              TOOL 01
+          <!-- BOOK 1 -->
+
+          <article class="publication">
+
+            <div>
+
+              <h3>
+                The ASA System: The Operating
+                System for Professional Portability
+              </h3>
+
+
+              <p>
+                A Field Manual to Reduce Dependency,
+                Increase Portability, and Build
+                Professional Freedom.
+              </p>
+
+
+              <div class="publication-meta">
+                Last updated: 15 June 2026
+              </div>
+
             </div>
 
-            <h3>
-              Scholarship Intelligence Desk
-            </h3>
 
-            <p>
-              Continuously updated research and decision support
-              for international scholarship applicants.
-            </p>
-
-            <div class="product-action">
-
-              <a
-                href="https://fundedabroadindia.gumroad.com/l/scholarship-intelligence-desk"
-                target="_blank"
-                rel="noopener"
-              >
-                Access the Desk →
-              </a>
-
-            </div>
+            <a
+              class="publication-link"
+              href="https://leanpub.com/the-asa-system"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View book
+            </a>
 
           </article>
 
 
-          <article class="product-card">
 
-            <div class="product-number">
-              TOOL 02
-            </div>
+          <!-- BOOK 2 -->
 
-            <h3>
-              The Scholarship Decision System
-            </h3>
+          <article class="publication">
 
-            <p>
-              A research-based framework for evaluating,
-              prioritising and preparing for international
-              scholarship opportunities.
-            </p>
+            <div>
 
-            <div class="product-action">
+              <h3>
+                Research Production System™
+              </h3>
 
-              <a
-                href="https://fundedabroadindia.gumroad.com/l/scholarship-decision-system"
-                target="_blank"
-                rel="noopener"
-              >
-                Access the System →
-              </a>
+
+              <p>
+                Building an AI-Powered Research
+                Factory for Consistent Academic Output.
+              </p>
+
+
+              <div class="publication-meta">
+                Last updated: 3 June 2026
+              </div>
 
             </div>
+
+
+            <a
+              class="publication-link"
+              href="https://leanpub.com/researchproductionsystem"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View book
+            </a>
 
           </article>
 
 
-          <article class="product-card">
 
-            <div class="product-number">
-              GUIDE 03
-            </div>
+          <!-- BOOK 3 -->
 
-            <h3>
-              Before You Apply
-            </h3>
+          <article class="publication">
 
-            <p>
-              A decision guide for choosing better-fit
-              international scholarships before investing major
-              preparation time.
-            </p>
+            <div>
 
-            <div class="product-action">
+              <h3>
+                The Executive Decision Defense
+                Playbook
+              </h3>
 
-              <a
-                href="https://fundedabroadindia.gumroad.com/l/before-you-apply"
-                target="_blank"
-                rel="noopener"
-              >
-                Read the Guide →
-              </a>
+
+              <p>
+                Doctrine, Structures, and Reasoning
+                Systems for Defensible Executive
+                Judgment.
+              </p>
+
+
+              <div class="publication-meta">
+                Last updated: 22 January 2026
+              </div>
 
             </div>
+
+
+            <a
+              class="publication-link"
+              href="https://leanpub.com/executive-decision-defense-playbook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View book
+            </a>
 
           </article>
+
 
         </div>
 
@@ -1707,224 +1618,436 @@
     </section>
 
 
-    <!-- ==============================
-         PUBLICATION MODEL
-    =============================== -->
+
+    <!-- =========================
+         GUMROAD
+    ========================= -->
 
     <section
-      id="model"
-      class="section model"
+      id="gumroad"
+      class="section gumroad-section"
     >
 
-      <div class="page">
+      <div class="container">
+
 
         <div class="section-heading">
 
-          <span class="section-code code-gold">
-            Publication Model
-          </span>
+          <div class="section-label">
+            Gumroad Publications
+          </div>
+
 
           <h2>
-            One system, different outputs
+            Selected Gumroad publications
           </h2>
 
-          <p>
-            The publication process connects research with
-            reader-facing outputs without treating every
-            publication as the same type of product.
+
+          <p class="section-intro">
+            Three approved digital publications
+            focused on scholarship research,
+            preparation and decision support.
           </p>
 
         </div>
 
 
-        <ul class="model-list">
+        <div class="publication-list">
 
-          <li>
-            <strong>
-              Research
-            </strong>
 
-            <span>
-              Evidence, analysis, source material and organised
-              knowledge.
-            </span>
-          </li>
+          <!-- BOOK 1 -->
 
-          <li>
-            <strong>
-              Framework
-            </strong>
+          <article class="publication">
 
-            <span>
-              A structured method for understanding,
-              evaluating or applying the research.
-            </span>
-          </li>
+            <div>
 
-          <li>
-            <strong>
-              Guide / Tool
-            </strong>
+              <h3>
+                Scholarship Intelligence Desk
+              </h3>
 
-            <span>
-              A practical resource derived from the research and
-              framework.
-            </span>
-          </li>
 
-          <li>
-            <strong>
-              Digital Publication
-            </strong>
+              <p>
+                Continuously Updated Research and
+                Decision Support for International
+                Scholarship Applicants.
+              </p>
 
-            <span>
-              A readable, accessible and publicly available
-              knowledge output.
-            </span>
-          </li>
+            </div>
 
-          <li>
-            <strong>
-              Distribution
-            </strong>
 
-            <span>
-              Placement across appropriate research, publishing,
-              archive and professional platforms.
-            </span>
-          </li>
+            <a
+              class="publication-link"
+              href="https://fundedabroadindia.gumroad.com/l/scholarship-intelligence-desk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View publication
+            </a>
 
-          <li>
-            <strong>
-              Access
-            </strong>
+          </article>
 
-            <span>
-              Readers can find, read, apply, reference and
-              revisit the resulting work.
-            </span>
-          </li>
 
-        </ul>
+
+          <!-- BOOK 2 -->
+
+          <article class="publication">
+
+            <div>
+
+              <h3>
+                The Scholarship Decision System
+              </h3>
+
+
+              <p>
+                A Research-Based Framework for
+                Evaluating, Prioritising and
+                Preparing for International
+                Scholarships.
+              </p>
+
+            </div>
+
+
+            <a
+              class="publication-link"
+              href="https://fundedabroadindia.gumroad.com/l/scholarship-decision-system"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View publication
+            </a>
+
+          </article>
+
+
+
+          <!-- BOOK 3 -->
+
+          <article class="publication">
+
+            <div>
+
+              <h3>
+                Before You Apply
+              </h3>
+
+
+              <p>
+                A Decision Guide for Choosing
+                Better-Fit International Scholarships.
+              </p>
+
+            </div>
+
+
+            <a
+              class="publication-link"
+              href="https://fundedabroadindia.gumroad.com/l/before-you-apply"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View publication
+            </a>
+
+          </article>
+
+
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- ==============================
+
+    <!-- =========================
+         SELAR
+    ========================= -->
+
+    <section
+      id="selar"
+      class="section selar-section"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Selar Profile
+          </div>
+
+
+          <h2>
+            Nabal Kishore Pande on Selar
+          </h2>
+
+
+          <p class="section-intro">
+            The Selar profile is included as a
+            publishing and access identity only.
+            No Selar books or products are listed
+            here.
+          </p>
+
+        </div>
+
+
+        <div class="selar-profile">
+
+          <h3>
+            Research-driven guides, frameworks,
+            and tools
+          </h3>
+
+
+          <p>
+            Research-driven guides, frameworks,
+            and tools that help students and
+            professionals make better education
+            and career decisions.
+          </p>
+
+
+          <a
+            href="https://selar.com/m/nabalkishorepande"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Selar profile
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COMPLETE PUBLICATION DIRECTORY
+    ========================= -->
+
+    <section
+      id="publications"
+      class="section"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Publication Directory
+          </div>
+
+
+          <h2>
+            Approved publication inventory
+          </h2>
+
+
+          <p class="section-intro">
+            Six publications are listed on this
+            page: three on Leanpub and three on
+            Gumroad. Selar is represented by its
+            profile only.
+          </p>
+
+        </div>
+
+
+        <div class="platform-grid">
+
+
+          <article class="platform-card leanpub">
+
+            <span class="platform-tag">
+              Leanpub
+            </span>
+
+
+            <h3>
+              3 books
+            </h3>
+
+
+            <p>
+              The ASA System, Research Production
+              System™, and The Executive Decision
+              Defense Playbook.
+            </p>
+
+
+            <a
+              class="platform-link"
+              href="#leanpub"
+            >
+              View Leanpub books
+            </a>
+
+          </article>
+
+
+
+          <article class="platform-card gumroad">
+
+            <span class="platform-tag">
+              Gumroad
+            </span>
+
+
+            <h3>
+              3 publications
+            </h3>
+
+
+            <p>
+              Scholarship Intelligence Desk,
+              The Scholarship Decision System,
+              and Before You Apply.
+            </p>
+
+
+            <a
+              class="platform-link"
+              href="#gumroad"
+            >
+              View Gumroad publications
+            </a>
+
+          </article>
+
+
+
+          <article class="platform-card selar">
+
+            <span class="platform-tag">
+              Selar
+            </span>
+
+
+            <h3>
+              Profile only
+            </h3>
+
+
+            <p>
+              The Selar profile provides the
+              platform-level identity and access
+              point.
+            </p>
+
+
+            <a
+              class="platform-link"
+              href="https://selar.com/m/nabalkishorepande"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Selar profile
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
          ACCESS
-    =============================== -->
+    ========================= -->
 
     <section
       id="access"
-      class="section access"
+      class="section access-section"
     >
 
-      <div class="page">
+      <div class="container">
+
 
         <div class="section-heading">
 
-          <span class="section-code code-purple">
-            Access
-          </span>
+          <div class="section-label">
+            Access Model
+          </div>
+
 
           <h2>
-            Public access is part of the publication
+            Research, publication and access
           </h2>
+
+
+          <p class="section-intro">
+            The digital publishing layer makes
+            selected research-derived knowledge
+            accessible through established
+            publication and distribution platforms.
+          </p>
 
         </div>
 
 
         <div class="access-grid">
 
-          <div class="access-card">
+
+          <article class="access-card">
 
             <h3>
-              Research &amp; Publishing Hub
+              Research-driven
             </h3>
 
+
             <p>
-              The central public entry point for the wider
-              research and publishing system.
+              Publications are connected to
+              research, frameworks, evidence and
+              practical decision systems.
             </p>
 
-            <a
-              href="https://nabalkishorepande.github.io/"
-              target="_blank"
-              rel="noopener"
-            >
-              Open Research &amp; Publishing Hub →
-            </a>
-
-          </div>
+          </article>
 
 
-          <div class="access-card">
+
+          <article class="access-card">
 
             <h3>
-              Funded Abroad India
+              Digital-first
             </h3>
 
+
             <p>
-              Research-led scholarship intelligence, decision
-              guidance and practical preparation resources.
+              Digital publication provides direct
+              access to structured knowledge and
+              practical resources.
             </p>
 
-            <a
-              href="https://fundedabroadindia.blogspot.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              Open Funded Abroad India →
-            </a>
-
-          </div>
+          </article>
 
 
-          <div class="access-card">
+
+          <article class="access-card">
 
             <h3>
-              Research Portfolio
+              Platform-linked
             </h3>
 
-            <p>
-              The wider portfolio documents research,
-              frameworks, publications and open research
-              infrastructure.
-            </p>
-
-            <a
-              href="https://github.com/NabalKishorePande/nabal-kishore-pande-research-portfolio"
-              target="_blank"
-              rel="noopener"
-            >
-              Open Research Portfolio →
-            </a>
-
-          </div>
-
-
-          <div class="access-card">
-
-            <h3>
-              Author Research Profile
-            </h3>
 
             <p>
-              Research identity and scholarly profile information
-              are maintained across recognised public platforms.
+              Each publication links directly to
+              its approved publishing platform.
             </p>
 
-            <a
-              href="https://orcid.org/my-orcid?orcid=0009-0007-3325-9966"
-              target="_blank"
-              rel="noopener"
-            >
-              Open ORCID Profile →
-            </a>
+          </article>
 
-          </div>
 
         </div>
 
@@ -1932,63 +2055,139 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- ==============================
+
+  <!-- =========================
        FOOTER
-  =============================== -->
+  ========================= -->
 
   <footer>
 
-    <div class="page">
+    <div class="container">
 
-      <p>
-        <strong>Nabal Kishore Pande</strong>
-        |
-        Independent Researcher &amp; Author
-      </p>
 
-      <p>
-        Decision Systems · Research Frameworks ·
-        Execution Intelligence · Scholarship Preparation Intelligence
-      </p>
+      <div class="footer-grid">
 
-      <p>
 
-        <a
-          href="https://github.com/NabalKishorePande"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+        <div>
 
-        &nbsp;·&nbsp;
+          <h3>
+            Nabal Kishore Pande
+          </h3>
 
-        <a
-          href="https://orcid.org/my-orcid?orcid=0009-0007-3325-9966"
-          target="_blank"
-          rel="noopener"
-        >
-          ORCID
-        </a>
 
-        &nbsp;·&nbsp;
+          <p>
+            Independent researcher and author
+            working across decision systems,
+            research frameworks, execution
+            intelligence and scholarship
+            preparation intelligence.
+          </p>
 
-        <a
-          href="https://fundedabroadindia.blogspot.com/"
-          target="_blank"
-          rel="noopener"
-        >
-          Funded Abroad India
-        </a>
+        </div>
 
-      </p>
+
+        <div>
+
+          <h3>
+            Publishing Profiles
+          </h3>
+
+
+          <div class="footer-links">
+
+            <a
+              href="https://leanpub.com/u/nabalkishorepande"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leanpub
+            </a>
+
+
+            <a
+              href="https://fundedabroadindia.gumroad.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gumroad
+            </a>
+
+
+            <a
+              href="https://selar.com/m/nabalkishorepande"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Selar
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Page Navigation
+          </h3>
+
+
+          <div class="footer-links">
+
+            <a href="#research">
+              Research
+            </a>
+
+
+            <a href="#platforms">
+              Platforms
+            </a>
+
+
+            <a href="#leanpub">
+              Leanpub
+            </a>
+
+
+            <a href="#gumroad">
+              Gumroad
+            </a>
+
+
+            <a href="#selar">
+              Selar
+            </a>
+
+
+            <a href="#access">
+              Access
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 Nabal Kishore Pande.
+        Non-ISBN Publications &amp; Digital Publishing.
+
+      </div>
+
 
     </div>
 
   </footer>
+
 
 </body>
 </html>
