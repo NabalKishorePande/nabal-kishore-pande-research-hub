@@ -26,7 +26,10 @@
     name="theme-color"
     content="#17324D"
   >
-
+<link
+  rel="canonical"
+  href="https://nabalkishorepande.github.io/nabal-kishore-pande-research-hub/"
+>
   <!-- Open Graph -->
   <meta
     property="og:type"
@@ -100,6 +103,7 @@
         "https://openalex.org/authors/a5133520791",
         "https://www.lens.org/lens/profile/713588055/scholar",
         "https://commons.datacite.org/orcid.org/0009-0007-3325-9966",
+    "https://explore.openaire.eu/search/advanced/research-outcomes?f0=resultauthor&fv0=Nabal%20Kishore%20Pande",
         "https://www.zotero.org/nabalkishorepande",
         "https://synapsesocial.com/authors/6a596d032275dee03afc7aaa",
         "https://independentresearcher.academia.edu/NabalKishorePande",
@@ -173,7 +177,24 @@
       outline-offset: 3px;
       border-radius: 4px;
     }
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 1000;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  color: var(--nav);
+  border: 2px solid var(--p01-accent);
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
 
+.skip-link:focus {
+  top: 16px;
+}
     .site-header {
       background: var(--nav);
       color: #FFFFFF;
@@ -798,9 +819,25 @@
         transform: rotate(90deg);
       }
 
-      .relationship-row {
-        justify-content: flex-start;
-      }
+.relationship-map {
+  overflow-x: visible;
+  padding: 20px;
+}
+
+.relationship-row {
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  margin: 18px 0;
+}
+
+.relationship-node {
+  width: min(100%, 340px);
+}
+
+.relationship-arrow {
+  transform: rotate(90deg);
+}
 
       .section {
         margin-bottom: 48px;
@@ -819,7 +856,7 @@
 </head>
 
 <body>
-
+<a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- =========================================================
        HEADER
        ========================================================= -->
@@ -897,7 +934,7 @@
   </header>
 
 
-  <main>
+<main id="main-content">
 
     <!-- =========================================================
          INTRODUCTION
@@ -1691,7 +1728,9 @@
           objects across publication, repository, and scholarly
           discovery systems.
         </p>
-
+<p class="identifier-mobile-note">
+  Swipe horizontally to view the complete identifier table.
+</p>
 
         <div class="identifier-table-wrap">
 
